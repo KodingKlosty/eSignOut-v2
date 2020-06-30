@@ -1,0 +1,19 @@
+//Fonts
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+$righteous: "Righteous";
+
+// Color Variables
+$primary: #662e9b;
+$success: #43BCCD;
+$danger: #EA3546;
+$warning: #F9C80E;
+$info: #F86624;
+
+@import 'style';
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+html, body, #root #root>div {
+height: 100%;
+background-color: #f4f4f4;
+}

@@ -1,0 +1,65 @@
+.mainDiv{
+    margin: 0 auto;
+    align-self: center;
+    height: 100vh;
+}
+
+
+.form-login {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 50px auto;
+    border: 2px solid $primary;
+    border-radius: 30px;
+}
+
+.logo85 {
+    width: 85%;
+    height: 85%;
+    padding: 15px;
+    margin: auto;
+}
+
+.okColorBtn {
+    background-color: $primary;
+    color: white;
+    font-weight: bolder;
+    border: 2px solid $primary;
+
+    &:hover{
+        background-color: #298c9a;
+        border: 2px solid #298c9a;
+    }
+}
+
+.cancelColorBtn {
+    background-color: $danger;
+    color: white;
+    font-weight: bolder;
+    border: 2px solid $danger;
+
+    &:hover{
+        color: white;
+        background-color: #bf1224;
+        border: 2px solid #bf1224;
+    }
+}
+
+.eSignOutLogin{
+    color: #000;
+    font-weight: bolder;
+}
+
+.header {
+    background-color: $primary;
+    margin: auto;
+    height: 135px;
+}
+
+.footer {
+    background-color: $primary;
+    margin: auto;
+}
+
+
