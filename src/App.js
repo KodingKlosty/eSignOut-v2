@@ -23,7 +23,7 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={Landing}  />
-          <Route path="/signIn" component={SignIn} />
+          <Route path="/Login" component={SignIn} />
         </Switch>
       </Router>
       <Footer />

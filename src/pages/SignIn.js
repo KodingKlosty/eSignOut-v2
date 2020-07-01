@@ -29,9 +29,6 @@ class SignIn extends Component {
                     <button class="okColorBtn btn-lg btn-block" type="submit">
                         Login
                     </button>
-                    <button href='/' class="cancelColorBtn btn-lg btn-block" type="button">
-                        Cancel 
-                    </button>
                </form> 
         )
     }
