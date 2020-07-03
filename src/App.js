@@ -2,7 +2,6 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  Link,
   Route
 } from 'react-router-dom'
 import './scss/main.scss'
@@ -13,6 +12,7 @@ import Landing from './pages/Landing'
 import SignIn from './pages/SignIn'
 import Footer from './component/Footer'
 import Header from './component/Header'
+import Register from './pages/Register'
 
 
 function App() {
@@ -23,7 +23,8 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={Landing}  />
-          <Route path="/Login" component={SignIn} />
+          <Route path="/login" component={SignIn} />
+          <Route path="/register" component={Register} />
         </Switch>
       </Router>
       <Footer />

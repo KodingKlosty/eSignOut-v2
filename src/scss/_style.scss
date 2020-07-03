@@ -1,31 +1,21 @@
-.mainDiv{
-    margin: 0 auto;
-    align-self: center;
-    height: 100vh;
+//components
+.header {
+    background-color: $primary;
+    margin: auto;
+    height: 135px;
 }
 
-
-.form-login {
-    width: 100%;
-    max-width: 330px;
-    padding: 15px;
-    margin: 50px auto;
-    border: 2px solid $primary;
-    border-radius: 30px;
-}
-
-.logo85 {
-    width: 85%;
-    height: 85%;
-    padding: 15px;
+.footer {
+    background-color: $primary;
     margin: auto;
 }
+// Universal objects
 
 .okColorBtn {
-    background-color: $primary;
+    background-color: $success;
     color: white;
     font-weight: bolder;
-    border: 2px solid $primary;
+    border: 2px solid $success;
 
     &:hover{
         background-color: #298c9a;
@@ -45,21 +35,45 @@
         border: 2px solid #bf1224;
     }
 }
+.logo85 {
+    width: 85%;
+    height: 85%;
+    padding: 15px;
+    margin: auto;
+}
+
+// pages
+
+//** Login Page
+.mainDiv{
+    margin: 0 auto;
+    align-self: center;
+    height: 100vh;
+}
+
+.form-login {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 50px auto;
+    border: 2px solid $primary;
+    border-radius: 30px;
+}
 
 .eSignOutLogin{
     color: #000;
     font-weight: bolder;
 }
 
-.header {
-    background-color: $primary;
-    margin: auto;
-    height: 135px;
-}
+//** Registation Page
 
-.footer {
-    background-color: $primary;
-    margin: auto;
+.form-reg {
+    width: 100%;
+    max-width: 600px;
+    padding: 15px;
+    margin: 50px auto;
+    border: 2px solid $primary;
+    border-radius: 30px;
 }
 
 
