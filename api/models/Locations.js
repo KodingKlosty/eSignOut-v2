@@ -4,10 +4,13 @@ const LocationSchema = new mongoose.Schema({
     locationName: {
         type: String,
         required: true,
-        unique: true
     },
     teams: {
         type: Array
+    },
+    orgId:{
+        type: String,
+        required: true
     },
     date: {
         type: Date,

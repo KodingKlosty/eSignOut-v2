@@ -6,27 +6,27 @@ import eSignoutblkshadow2 from '../imgs/eSignoutblkshadow2.png'
 class SignIn extends Component {
     render (){
         return(
-               <form class="form-login text-center">
-                    <img src={eSignoutblkshadow2} alt="eSignOut logo" class="logo85" />
-                    <h1 class="h4 mb-3 eSignOutLogin ">eSignOut Login</h1>
-                    <label for="inputEmail" class="sr-only">Email address</label>
+               <form className="form-login text-center">
+                    <img src={eSignoutblkshadow2} alt="eSignOut logo" className="logo85" />
+                    <h1 className="h4 mb-3 eSignOutLogin ">eSignOut Login</h1>
+                    <label htmlFor="inputEmail" className="sr-only">Email address</label>
                     <input
                         type="email"
                         id="inputEmail"
-                        class="form-control mb-2"
+                        className="form-control mb-2"
                         placeholder="Email Address"
                         required
                         autoFocus
                     />
-                    <label for="inputPassword" class="sr-only">Password</label>
+                    <label htmlFor="inputPassword" className="sr-only">Password</label>
                     <input
                         type="password"
                         id="inputPassword"
-                        class="form-control mb-2"
+                        className="form-control mb-2"
                         placeholder="Password"
                         required
                     />
-                    <button class="okColorBtn btn-lg btn-block" type="submit">
+                    <button className="okColorBtn btn-lg btn-block" type="submit">
                         Login
                     </button>
                </form> 

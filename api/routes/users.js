@@ -19,10 +19,7 @@ router.get('/:id', (req, res) => {
 router.post('/createUser', (req, res) => {
     //formdata
     const fd  = req.body
-    const existingUsername = User.findOne({username: fd.username})
-    console.log(existingUsername)
-
-  /*  const newUser = new User({
+    const newUser = new User({
         firstName: fd.firstName,
         lastName: fd.lastName,
         username: fd.username,
@@ -30,7 +27,11 @@ router.post('/createUser', (req, res) => {
         password: fd.password,
         companyName: fd.companyName,
         role: fd.role
-    });  */  
+    });   
+    
+    newUser.save()
+        .then(()=> res.json({success: true, msg: "User Created"}))
+        .catch(err => res.json({success: false, msg: "User exists already", err: err}))
 })
 
 router.put('/:id', (req, res) => {

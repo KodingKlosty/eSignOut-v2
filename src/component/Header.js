@@ -5,7 +5,7 @@ import eSignout from '../imgs/eSignout.png'
 class Header extends Component {
     render(){
         return(
-            <div class="text-center header" >
+            <div className="text-center header" >
                 <img src={eSignout} alt="eSignout Logo" />
             </div>
         )

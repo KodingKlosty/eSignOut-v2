@@ -5,12 +5,15 @@ class Nav extends Component {
     render(){
         return(
             <div>
-                <ul class='nav justify-content-center'>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
+                <ul className='nav justify-content-center'>
+                    <li className="nav-item">
+                        <a className="nava nav-link" href="/">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/login">Login</a>
+                    <li className="nav-item">
+                        <a className="nava nav-link" href="/login">Login</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nava nav-link" href="/register">Sign Up</a>
                     </li>
                 </ul>
             </div>

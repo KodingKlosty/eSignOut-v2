@@ -4,6 +4,8 @@ import {
   Switch,
   Route
 } from 'react-router-dom'
+import { Provider } from 'react-redux';
+import store from "./reduxStore"
 import './scss/main.scss'
 
 // Components
@@ -13,22 +15,26 @@ import SignIn from './pages/SignIn'
 import Footer from './component/Footer'
 import Header from './component/Header'
 import Register from './pages/Register'
+import Dashboard from './pages/Dashboard'
 
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Nav />
-      <Router>
-        <Switch>
-          <Route exact path="/" component={Landing}  />
-          <Route path="/login" component={SignIn} />
-          <Route path="/register" component={Register} />
-        </Switch>
-      </Router>
-      <Footer />
-    </div>
+    <Provider store={store}>
+      <div>
+        <Header />
+        <Nav />
+        <Router>
+          <Switch>
+            <Route exact path="/" component={Landing}  />
+            <Route path="/login" component={SignIn} />
+            <Route path="/register" component={Register} />
+            <Route path="/dashboard" component={Dashboard} />
+          </Switch>
+        </Router>
+        <Footer />
+      </div>
+    </Provider>
   );
 }
 

@@ -7,7 +7,7 @@ import MangoRainFooterLogo from '../imgs/MangoRainFooterLogo.png'
 class Footer extends Component {
     render(){
         return(
-            <div class="footer text-center" >
+            <div className="footer text-center" >
                 <img src={MangoRainFooterLogo} alt='Mango Rain Logo' />
             </div>
         )
