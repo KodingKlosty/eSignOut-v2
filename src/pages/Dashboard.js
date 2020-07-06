@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {getLocations, addLocation, delLocation} from '../actions/locActions'
+import {getLocations, delLocation} from '../actions/locActions'
 import LocModal from '../component/LocModal'
 import PropTypes from 'prop-types'
 
