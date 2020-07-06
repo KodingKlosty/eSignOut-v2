@@ -1,0 +1,161 @@
+//components
+.header {
+    background-color: $primary;
+    margin: auto;
+    height: 135px;
+}
+
+.footer {
+    background-color: $primary;
+    margin: auto;
+}
+
+.nava {
+    color: $primary;
+    font-weight: bold;
+
+    &:hover{
+        background-color: $primary;
+        color: white;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+}
+// Universal objects
+
+.okColorBtn {
+    background-color: $success;
+    color: white;
+    font-weight: bolder;
+    border: 2px solid $success;
+    padding: 3px;
+
+    &:hover{
+        background-color: #298c9a;
+        border: 2px solid #298c9a;
+    }
+}
+
+.cancelColorBtn {
+    background-color: $danger;
+    color: white;
+    font-weight: bolder;
+    border: 2px solid $danger;
+    text-decoration: none;
+    margin: 3px;
+
+    &:hover{
+        color: white;
+        background-color: #bf1224;
+        border: 2px solid #bf1224;
+    }
+}
+
+.primaryColorBtn {
+    background-color: $primary;
+    color: white;
+    font-weight: bolder;
+    border: 2px solid $primary;
+    text-decoration: none;
+    margin: 3px;
+
+    &:hover{
+        color: white;
+        background-color: #3f1c60;
+        border: 2px solid #3f1c60;
+    }
+}
+
+.warningColorBtn {
+    background-color: $warning;
+    color: white;
+    font-weight: bolder;
+    border: 2px solid $warning;
+    text-decoration: none;
+    margin: 3px;
+
+    &:hover{
+        color: white;
+        background-color: #b69105;
+        border: 2px solid #b69105;
+    }
+}
+
+.infoColorBtn {
+    background-color: $info;
+    color: white;
+    font-weight: bolder;
+    border: 2px solid $info;
+    text-decoration: none;
+    margin: 3px;
+
+    &:hover{
+        color: white;
+        background-color: #c94306;
+        border: 2px solid #c94306;
+    }
+}
+
+.logo85 {
+    width: 85%;
+    height: 85%;
+    padding: 15px;
+    margin: auto;
+}
+
+.divTopSpacing{
+    margin-top: 50px;
+}
+
+.tableBotSpacing{
+    margin-bottom: 50px;
+}
+
+// pages
+
+
+//** Login Page
+.mainDiv{
+    margin: 0 auto;
+    align-self: center;
+    height: 100vh;
+}
+
+.form-login {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 50px auto;
+    border: 2px solid $primary;
+    border-radius: 30px;
+}
+
+.eSignOutLogin{
+    color: #000;
+    font-weight: bolder;
+}
+
+//** Registation Page
+
+.form-reg {
+    width: 100%;
+    max-width: 650px;
+    padding: 15px;
+    margin: 50px auto;
+    border: 2px solid $primary;
+    border-radius: 30px;
+}
+
+//** Dashboard
+
+.table-dash{
+    width: 100%;
+    max-width: 700px;
+    padding: 15px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+
