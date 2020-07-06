@@ -22,11 +22,11 @@ mongoose.connect(db, {
 app.use(express.json());
 
 // Routes
-//app.use("/", require('./routes/index'));
-app.use("/users", require('./routes/users'));
-app.use("/teams", require('./routes/teams'));
-app.use("/orgs", require('./routes/orgs'));
-app.use("/locations", require('./routes/locations'))
+app.use("/api", require('./routes/api/index'));
+app.use("/api/users", require('./routes/api/users'));
+app.use("/api/teams", require('./routes/api/teams'));
+app.use("/api/orgs", require('./routes/api/orgs'));
+app.use("/api/locations", require('./routes/api/locations'))
 
 //Serve Static assets if in production
 if(process.env.NODE_ENV === "production"){

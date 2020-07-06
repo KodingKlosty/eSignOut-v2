@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const auth = require('../middleware/auth')
+const auth = require('../../middleware/auth')
 
 // User Model
-const User = require('../models/Users');
+const User = require('../../models/Users');
 
 //Get all users
 

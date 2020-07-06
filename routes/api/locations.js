@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const auth = require('../middleware/auth')
+const auth = require('../../middleware/auth')
 
 // User Model
-const Location = require('../models/Locations');
-const Org = require('../models/Orgs')
+const Location = require('../../models/Locations');
+const Org = require('../../models/Orgs')
 
 //Get all users
 

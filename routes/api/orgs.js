@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 // Org Model
-const Org = require('../models/Orgs');
-const User = require('../models/Users');
+const Org = require('../../models/Orgs');
+const User = require('../../models/Users');
 
 //Get all Orgs
 

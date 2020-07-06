@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 // Team Model
-const Team = require('../models/Teams');
+const Team = require('../../models/Teams');
 
 //Get all teams
 

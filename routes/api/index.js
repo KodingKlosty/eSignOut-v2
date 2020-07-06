@@ -3,13 +3,13 @@ const router = express.Router();
 const bcrypt = require('bcryptjs');
 const config = require('config')
 const jwt = require('jsonwebtoken')
-const auth = require('../middleware/auth')
+const auth = require('../../middleware/auth')
 
 
 //models
 
-const Org = require('../models/Orgs');
-const User = require('../models/Users');
+const Org = require('../../models/Orgs');
+const User = require('../../models/Users');
 
 router.get('/', (req, res) => res.send("Express is running with nodemon"));
 
