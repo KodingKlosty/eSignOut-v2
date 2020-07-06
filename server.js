@@ -22,7 +22,7 @@ mongoose.connect(db, {
 app.use(express.json());
 
 // Routes
-app.use("/", require('./routes/index'));
+//app.use("/", require('./routes/index'));
 app.use("/users", require('./routes/users'));
 app.use("/teams", require('./routes/teams'));
 app.use("/orgs", require('./routes/orgs'));
