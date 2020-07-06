@@ -1,12 +1,12 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
 const cors = require('cors')
+const config = require('config')
 
 const app = express();
 app.use(cors());
 // MongoDB Config
-const db = require('./config/keys').MongoURI;
+const db = config.get('mongoURI')
 
 // Connect to Mongo
 mongoose.connect(db, {
@@ -18,7 +18,7 @@ mongoose.connect(db, {
     .catch(err => console.log("Connection to MongoDB: FAILED", err));
 
 // BodyParser Middleware
-app.use(bodyParser.json());
+app.use(express.json());
 
 // Routes
 app.use("/", require('./routes/index'));

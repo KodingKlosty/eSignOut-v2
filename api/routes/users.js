@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const auth = require('../middleware/auth')
 
 // User Model
 const User = require('../models/Users');
@@ -22,7 +23,6 @@ router.post('/createUser', (req, res) => {
     const newUser = new User({
         firstName: fd.firstName,
         lastName: fd.lastName,
-        username: fd.username,
         email: fd.email,
         password: fd.password,
         companyName: fd.companyName,
@@ -35,7 +35,7 @@ router.post('/createUser', (req, res) => {
 })
 
 router.put('/:id', (req, res) => {
-    
+
 })
 
 router.delete('/:id', (req, res) => {
