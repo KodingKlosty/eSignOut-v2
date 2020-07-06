@@ -2,7 +2,6 @@
   "name": "esignout-v2",
   "version": "2.0.0",
   "private": true,
-  "node": "12.16.2",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -26,7 +25,10 @@
     "react-scripts": "3.4.1",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
-    "sass": "^1.26.9",
+    "sass": "^1.26.9"
+  },
+  "engines": {
+    "node": "12.16.2"
   },
   "scripts": {
     "start": "react-scripts start",
