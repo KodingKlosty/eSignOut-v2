@@ -9,26 +9,31 @@ export const REGISTER_SUCCESS = "REGISTER_SUCCESS"
 export const REGISTER_FAIL = "REGISTER_FAIL"
 export const GET_ERRORS = "GET_ERRORS"
 export const CLEAR_ERRORS = "CLEAR_ERRORS"
-
-
 //Org
 export const GET_ORGS = "GET_ORGS"
+export const GET_ORG = "GET_ORG"
 export const ADD_ORG = "ADD_ORG"
 export const UPD_ORG = "UPD_ORG"
 export const DEL_ORG = "DEL_ORG"
+export const ORG_LOADING = "ORG_LOADING"
+
 //Location
 export const GET_LOCATIONS = "GET_LOCATIONS"
+export const GET_LOCATION = "GET_LOCATION"
 export const ADD_LOCATION = "ADD_LOCATION"
 export const UPD_LOCATION = "UPD_LOCATION"
 export const DEL_LOCATION = "DEL_LOCATION"
 export const LOC_LOADING = "LOC_LOADING"
 //Team
 export const GET_TEAMS = "GET_TEAMS"
+export const GET_TEAM = "GET_TEAM"
 export const ADD_TEAM = "ADD_TEAM"
 export const UPD_TEAM = "UPD_TEAM"
 export const DEL_TEAM = "DEL_TEAM"
+export const TEAM_LOADING = "TEAM_LOADING"
 //User
 export const GET_USERS = "GET_USERS"
+export const GET_USER = "GET_USER"
 export const ADD_USER = "ADD_USER"
 export const UPD_USER = "UPD_USER"
 export const DEL_USER = "DEL_USER"

@@ -18,7 +18,8 @@ export default function(state = initialState, action) {
             return{
                 ...state,
                 locations: state.locations.filter(
-                    location => location._id !== action.payload)
+                    location => location._id !== action.payload
+                )
             };
         case ADD_LOCATION:
             return{

@@ -25,7 +25,7 @@ router.post('/createUser', (req, res) => {
         lastName: fd.lastName,
         email: fd.email,
         password: fd.password,
-        companyName: fd.companyName,
+        orgId: orgId,
         role: fd.role
     });   
     

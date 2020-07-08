@@ -4,6 +4,7 @@ const router = express.Router();
 // Org Model
 const Org = require('../../models/Orgs');
 const User = require('../../models/Users');
+const { findByIdAndUpdate } = require('../../models/Orgs');
 
 //Get all Orgs
 
@@ -21,7 +22,7 @@ router.get('/companyName', (req, res) => {
 
 router.post('/createCompany', (req,res) => {
      const {companyName, userId} = req.body
-
+     console.log("userid before save",userId)
      const newOrg = new Org({
          companyName
      })
@@ -30,7 +31,9 @@ router.post('/createCompany', (req,res) => {
                 .then(org => {                      
                     const orgIdUpdate = {
                     orgId: org._id
-                    };              
+                    };  
+                    console.log(org._id)
+                    console.log("userid after orgsave", userId)            
                 User.findByIdAndUpdate(userId, orgIdUpdate, function (err, user) {
                     if(err) return res.json({msg: "User was not updated with orgId", err: err});
                 })
@@ -41,7 +44,10 @@ router.post('/createCompany', (req,res) => {
 })
 
 router.get('/:id', (req, res) => {
-    res.send('Org: Id find Working')
+    Org.findById({_id: req.params.id})
+        .then(org => res.json(org))
+        .catch(err => res.status(404).json({success: false, msg: "No Org Found"}))
+
 })
 
 router.put('/:id ', (req, res) => {
@@ -53,19 +59,6 @@ router.delete('/:id', (req, res) => {
     .catch(err => res.status(404).json({success: false, msg:"Org was not Found"}))
 })
 
-/*
-
-       
-                User.update({userId, orgIdUpdate, function (err, user) {
-                    if (err) {
-                        res.json({msg: "An Error Occured While Updating User Info", err})
-                    } 
-                    res.json(user)    
-                }})
-                .catch(() => res.json(err))
-            
-
-*/
 
 
 module.exports = router;

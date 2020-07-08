@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {getLocations, delLocation} from '../actions/locActions'
+import { getOrg } from "../actions/orgActions";
 import LocModal from '../component/LocModal'
 import PropTypes from 'prop-types'
 
@@ -8,12 +9,15 @@ class Dashboard extends Component {
     constructor(props){
         super(props)
         this.state={
-            companyName: "ACME WebDesign",
-            orgId: "5f0156dea5abbe0fac1cea71"
+            companyName: "",
+            orgId: ""
         }
     }
 
+
     componentDidMount(){
+        console.log(this.props)
+        this.props.getOrg(this.state.orgId);
         this.props.getLocations(this.state.orgId);
     }
 
@@ -90,10 +94,13 @@ class Dashboard extends Component {
 Dashboard.propTypes = {
     getLocations: PropTypes.func.isRequired,
     delLocation: PropTypes.func.isRequired,
-    location: PropTypes.object.isRequired
+    getOrg: PropTypes.func.isRequired,
+    location: PropTypes.object.isRequired,
+    org: PropTypes.object.isRequired
 }
 
 const mapStateToProps = (state) =>({
-    location: state.location
+    location: state.location,
+    org: state.org
 })
-export default connect(mapStateToProps, { getLocations, delLocation })(Dashboard)
+export default connect(mapStateToProps, { getOrg,getLocations,delLocation })(Dashboard)

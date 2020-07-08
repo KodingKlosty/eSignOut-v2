@@ -13,7 +13,8 @@ const db = config.get('mongoURI')
 mongoose.connect(db, {
         useNewUrlParser: true, 
         useUnifiedTopology: true, 
-        useCreateIndex: true
+        useCreateIndex: true,
+        useFindAndModify: false
     })
     .then(() => console.log('Connection to MongoDb: ONLINE'))
     .catch(err => console.log("Connection to MongoDB: FAILED", err));
