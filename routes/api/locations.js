@@ -16,7 +16,6 @@ router.get('/', (req, res) => {
 })
 
  router.get('/:id', (req, res) => {
-     console.log(req.params)
    Location.find({orgId: req.params.id})
     .sort({locationName: 1})
     .then(loc => res.json(loc))
@@ -36,6 +35,7 @@ router.delete('/:id', (req, res) => {
 router.post('/createLocation', auth, (req, res) => {
     //form data
     const fd = req.body
+    console.log(fd)
     const newLoc = new Location({
         locationName: fd.locationName,
         teams: fd.teams,

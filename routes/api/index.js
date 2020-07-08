@@ -15,12 +15,16 @@ router.get('/', (req, res) => res.send("Express is running with nodemon"));
 
 router.post('/register',(req, res) => {
     //formdata
-    const {firstName, lastName, username,
-            email, password, companyName}  = req.body
+    const {firstName, lastName,
+            email, password}  = req.body
+        console.log(req.body)
+        if(!firstName || !lastName || !email  || !password){
+            return res.status(400).json({ msg: 'Please enter all fields'})
+        }
 
         User.findOne({email})
             .then(userEmail => {
-                if(userEmail)res.status(400).json({msg: "email already exits"}); 
+                if(userEmail) return res.status(400).json({msg: "email already exits"}); 
 
                 const newUser = new User({
                     firstName: firstName,
@@ -47,6 +51,7 @@ router.post('/register',(req, res) => {
                                             res.json({
                                                 token,
                                                 user: {
+                                                    id: user._id,
                                                     orgId: user.orgId,
                                                     firstName: user.firstName,
                                                     role: user.role

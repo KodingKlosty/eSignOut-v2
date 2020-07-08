@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -7,6 +7,8 @@ import {
 import { Provider } from 'react-redux';
 import store from "./reduxStore"
 import './scss/main.scss'
+// Actions
+import { loadUser } from "./actions/authActions";
 
 // Components
 import Nav from './component/Nav'
@@ -16,26 +18,37 @@ import Footer from './component/Footer'
 import Header from './component/Header'
 import Register from './pages/Register'
 import Dashboard from './pages/Dashboard'
+import NewOrg from './pages/NewOrg';
+import ProtectedRoute from './component/ProtectedRoute'
 
 
-function App() {
-  return (
-    <Provider store={store}>
-      <div>
-        <Header />
-        <Nav />
-        <Router>
-          <Switch>
-            <Route exact path="/" component={Landing}  />
-            <Route path="/login" component={SignIn} />
-            <Route path="/register" component={Register} />
-            <Route path="/dashboard" component={Dashboard} />
-          </Switch>
-        </Router>
-        <Footer />
-      </div>
-    </Provider>
-  );
+class App extends Component {
+
+  componentDidMount(){
+    store.dispatch(loadUser());
+  }
+  
+  render(){
+    return (
+      <Provider store={store}>
+        <div>
+          <Header />
+          <Nav />
+          <Router>
+            <Switch>
+              <Route exact path="/" component={Landing}  />
+              <Route path="/login" component={SignIn} />
+              <Route path="/register" component={Register} />
+              <ProtectedRoute path="/dashboard" component={Dashboard} />
+              <Route path="/createCompany" component={NewOrg} />
+            </Switch>
+          </Router>
+          <Footer />
+        </div>
+      </Provider>
+    );
+  }
 }
+
 
 export default App;
