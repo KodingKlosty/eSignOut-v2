@@ -43,8 +43,6 @@ class LocModal extends Component {
             orgId: orgId
         }
         
-        console.log(this.props.auth.orgId)
-
         this.props.addLocation(newLocation) 
 
 
