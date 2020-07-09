@@ -9,7 +9,6 @@ const Org = require('../../models/Orgs')
 //Get all users
 
 router.get('/', (req, res) => {
-    console.log(req.body)
     Location.find()
      .sort({locationName: 1})
      .then(loc => res.json(loc));

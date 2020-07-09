@@ -16,8 +16,6 @@ class Dashboard extends Component {
 
 
     componentDidMount(){
-        console.log(this.props)
-        this.props.getOrg(this.state.orgId);
         this.props.getLocations(this.state.orgId);
     }
 
@@ -56,8 +54,8 @@ class Dashboard extends Component {
                                 <tr key = {_id}>
                                     <td>{locationName}</td>
                                     <td></td>
-                                    <td>##</td>
-                                    <td>##</td>
+                                    <td></td>
+                                    <td></td>
                                     <td>
                                         <button 
                                             className="infoColorBtn btn-sm"
@@ -96,11 +94,9 @@ Dashboard.propTypes = {
     delLocation: PropTypes.func.isRequired,
     getOrg: PropTypes.func.isRequired,
     location: PropTypes.object.isRequired,
-    org: PropTypes.object.isRequired
 }
 
 const mapStateToProps = (state) =>({
     location: state.location,
-    org: state.org
 })
 export default connect(mapStateToProps, { getOrg,getLocations,delLocation })(Dashboard)

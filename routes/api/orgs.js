@@ -22,18 +22,14 @@ router.get('/companyName', (req, res) => {
 
 router.post('/createCompany', (req,res) => {
      const {companyName, userId} = req.body
-     console.log("userid before save",userId)
      const newOrg = new Org({
          companyName
      })
-
             newOrg.save()
                 .then(org => {                      
                     const orgIdUpdate = {
                     orgId: org._id
                     };  
-                    console.log(org._id)
-                    console.log("userid after orgsave", userId)            
                 User.findByIdAndUpdate(userId, orgIdUpdate, function (err, user) {
                     if(err) return res.json({msg: "User was not updated with orgId", err: err});
                 })

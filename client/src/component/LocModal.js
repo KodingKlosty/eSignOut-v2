@@ -8,7 +8,6 @@ class LocModal extends Component {
         this.state = {
             modal: false,
             locationName: '',
-            orgId: this.props.orgId
         }
     }
 
@@ -37,11 +36,14 @@ class LocModal extends Component {
 
     onSubmit = evn => {
         evn.preventDefault();
-        const{locationName, orgId } = this.state
+        const{locationName } = this.state
+        const orgId = this.props.auth.orgId
         const newLocation = {
             locationName: locationName,
             orgId: orgId
         }
+        
+        console.log(this.props.auth.orgId)
 
         this.props.addLocation(newLocation) 
 
@@ -97,7 +99,8 @@ class LocModal extends Component {
 }
 
 const mapStateToProps = state => ({
-    location: state.location
+    location: state.location,
+    auth: state.auth.user
 })
 
 export default connect(mapStateToProps, {addLocation})(LocModal)
