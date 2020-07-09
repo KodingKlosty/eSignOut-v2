@@ -14,7 +14,7 @@ The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
 #### ToDos
-- [ ] Get front-end authorization working<br />
+- [x] Get front-end authorization working<br />
 - [ ] Finish Teams functionality<br />
 - [ ] Finish Users functionality<br />
 - [ ] Clean-up processes<br />
