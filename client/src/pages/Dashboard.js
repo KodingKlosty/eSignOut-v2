@@ -2,28 +2,30 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {getLocations, delLocation} from '../actions/locActions'
 import { getOrg } from "../actions/orgActions";
+import { loadUser } from "../actions/authActions"
 import LocModal from '../component/LocModal'
 import PropTypes from 'prop-types'
+
 
 class Dashboard extends Component {
     constructor(props){
         super(props)
         this.state={
             companyName: "",
-            orgId: ""
+            orgId: this.props.auth.orgId,
         }
     }
-
 
     componentDidMount(){
         this.props.getLocations(this.state.orgId);
     }
 
-    onDeleteClick =(id) => {
+    onDeleteClick = (id) => {
         this.props.delLocation(id);
     }
 
     render(){
+        
         const {locations} = this.props.location
         const stateData = this.state
         return(
@@ -92,11 +94,13 @@ class Dashboard extends Component {
 Dashboard.propTypes = {
     getLocations: PropTypes.func.isRequired,
     delLocation: PropTypes.func.isRequired,
-    getOrg: PropTypes.func.isRequired,
+    loadUser: PropTypes.func.isRequired,
     location: PropTypes.object.isRequired,
+    auth: PropTypes.object.isRequired
 }
 
 const mapStateToProps = (state) =>({
     location: state.location,
+    auth: state.auth.user
 })
-export default connect(mapStateToProps, { getOrg,getLocations,delLocation })(Dashboard)
+export default connect(mapStateToProps, {  loadUser,getLocations,delLocation })(Dashboard)
