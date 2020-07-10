@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {getLocations, delLocation} from '../actions/locActions'
-import { getOrg } from "../actions/orgActions";
 import { loadUser } from "../actions/authActions"
 import LocModal from '../component/LocModal'
 import PropTypes from 'prop-types'
@@ -25,7 +24,6 @@ class Dashboard extends Component {
     }
 
     render(){
-        
         const {locations} = this.props.location
         const stateData = this.state
         return(
