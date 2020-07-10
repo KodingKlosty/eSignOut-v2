@@ -27,7 +27,6 @@ export const delOrg = id => dispatch => {
 }
 
 export const addOrg = org => dispatch => {
-    console.log("Org in addOrg", org)
     API.post('/api/orgs/createCompany', org)
         .then(res => dispatch({
             type: ADD_ORG,

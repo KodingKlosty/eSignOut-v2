@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { PropTypes } from "prop-types";
 import { register } from '../actions/authActions'
 import { clearErrors } from "../actions/errorActions";
-import NewOrg from './NewOrg';
 import { Redirect } from 'react-router-dom';
 
 

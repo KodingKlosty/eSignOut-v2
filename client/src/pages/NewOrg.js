@@ -2,6 +2,7 @@ import React,{Component} from 'react'
 import { connect } from "react-redux";
 import { PropTypes } from "prop-types";
 import { addOrg } from "../actions/orgActions";
+import { logout } from '../actions/authActions' 
 import { clearErrors, returnErrors } from "../actions/errorActions";
 import { Redirect } from 'react-router-dom'
 
@@ -11,7 +12,7 @@ class RegisterOrg extends Component {
         this.state = {
             companyName: '',
             msg: null,
-            redirectToDashboard: false
+            redirectToLogin: false
         }
 
     }
@@ -44,13 +45,17 @@ class RegisterOrg extends Component {
         
         this.props.addOrg(newOrg)
 
-        this.setState({redirectToDashboard: true})
+
+        this.setState({redirectToLogin: true})
+
+
     }
 
 
     render(){
-        if(this.state.redirectToDashboard === true){
-            return <Redirect to='/dashboard'/>
+        if(this.state.redirectToLogin === true){
+            this.props.logout();
+            return <Redirect to='/Success'/>
         }
         return(
             <div>
@@ -104,6 +109,8 @@ RegisterOrg.propTypes = {
     auth: PropTypes.object.isRequired,
     addOrg: PropTypes.func.isRequired,
     clearErrors: PropTypes.func.isRequired,
+    logout: PropTypes.func.isRequired
+
 }
 
 const mapStateToProps = (state) => ({
@@ -112,4 +119,4 @@ const mapStateToProps = (state) => ({
     auth: state.auth
 });
 
-export default connect(mapStateToProps, {addOrg, clearErrors})(RegisterOrg)
+export default connect(mapStateToProps, {addOrg, logout,clearErrors})(RegisterOrg)
