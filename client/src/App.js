@@ -20,6 +20,7 @@ import Register from './pages/Register'
 import Dashboard from './pages/Dashboard'
 import NewOrg from './pages/NewOrg';
 import ProtectedRoute from './component/ProtectedRoute'
+import Success from './pages/Success'
 
 
 class App extends Component {
@@ -41,6 +42,7 @@ class App extends Component {
               <Route path="/register" component={Register} />
               <ProtectedRoute path="/dashboard" component={Dashboard} />
               <Route path="/createCompany" component={NewOrg} />
+              <Route path="/success" component={Success} />
             </Switch>
           </Router>
           <Footer />
