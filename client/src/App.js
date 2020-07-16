@@ -34,16 +34,20 @@ class App extends Component {
       <Provider store={store}>
         <div>
           <Header />
-          <Nav />
           <Router>
+            <Nav />
+            <div>
             <Switch>
               <Route exact path="/" component={Landing}  />
               <Route path="/login" component={SignIn} />
               <Route path="/register" component={Register} />
               <ProtectedRoute path="/dashboard" component={Dashboard} />
+              <ProtectedRoute path="/teamDash" />
+              <ProtectedRoute path="/userUpdate" />
               <Route path="/createCompany" component={NewOrg} />
               <Route path="/success" component={Success} />
             </Switch>
+            </div>
           </Router>
           <Footer />
         </div>

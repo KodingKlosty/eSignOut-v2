@@ -18,6 +18,16 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    teamId: {
+        type: String, 
+        required: true,
+        default: "unassigned"
+    },
+    locationId: {
+        type: String,
+        required: true,
+        default: "unassigned"
+    },
     orgId: {
         type: String,
         required: true,

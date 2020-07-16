@@ -9,6 +9,10 @@ const TeamSchema = new mongoose.Schema({
     members: {
         type: Array
     },
+    locationId: {
+        type: String,
+        required: true
+    },
     date: {
         type: Date,
         default: Date.now

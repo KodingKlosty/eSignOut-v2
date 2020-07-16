@@ -10,12 +10,19 @@ class Nav extends Component {
 
         const authLinks = (
             <Fragment>
+
                 <li className="nav-item">
                     <a
                         className="nava nav-link"
-                        onClick={this.props.logout}
-                        href='/'>
-                            Logout
+                        href='/Dashboard'>
+                            Dashboard
+                        </a>
+                </li>
+                <li className="nav-item">
+                    <a
+                        className="nava nav-link"
+                        onClick={this.props.logout}>                            
+                        Logout
                         </a>
                 </li>
             </Fragment>

@@ -59,20 +59,21 @@ class Dashboard extends Component {
                                     <td>
                                         <button 
                                             className="infoColorBtn btn-sm"
-                                            tabindex="-1"
+                                            tabIndex="-1"
                                             disabled
                                             >
                                                 View
                                         </button>
                                         <button 
                                             className="okColorBtn btn-sm"
-                                            tabindex="-1"
+                                            tabIndex="-1"
                                             disabled
                                         >
                                             Edit
                                         </button>
                                         <button 
                                             className="cancelColorBtn btn-sm" 
+                                            tabIndex="-1s"
                                             onClick={this.onDeleteClick.bind(this, _id)}
                                         >
                                             Delete
